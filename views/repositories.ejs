@@ -1,0 +1,20 @@
+<p>
+    <a href="/">Home</a> | <a href="/logout">Log Out</a>
+</p>
+
+<h1> My repositories </h1>
+
+    <% for(var i=0; i<repositories.length; i++) { %>
+        <ul>
+            <li>
+                <p><strong> Repository Name: </strong> <%- repositories[i].name %> </p>
+                <p><strong> Repository Full Name: </strong> <%- repositories[i].full_name %> </p>
+                <p><strong> Repository HTML Url: </strong> <%- repositories[i].html_url %> </p>
+                <p><strong> Repository Description: </strong> <%- repositories[i].description %> </p>
+                <p><strong> Repository API Url: </strong> <%- repositories[i].url %> </p>
+                <p>
+                    <a href='/repositories/issues/<%- repositories[i].name %>'>Repository Issues </a>
+                </p>
+            </li>
+        </ul>
+    <% } %>

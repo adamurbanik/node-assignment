@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Passport-GitHub Example</title>
+	</head>
+	<body>
+		<% if (!user) { %>
+    	<h2>Welcome! Please log in.</h2>
+			<p>
+          <a href="/login">Log In</a>
+			</p>
+		<% } else { %>
+    	<h2>Hello <%= user.login %></h2>
+			<p>
+          <a href="/account">Account</a> | 
+          <a href="/logout">Log Out</a>
+			</p>
+		<% } %>
+    <h1> Public repositories </h1>
+
+    <% for(var i=0; i<repositories.length; i++) { %>
+        <ul>
+            <li>
+                <p><strong> Repository Name: </strong> <%- repositories[i].name %> </p>
+                <p><strong> Owner login: </strong> <%- repositories[i].owner.login %> </p>
+                <p>
+                    <strong> Owner HTML Url </strong> 
+                    <a href='<%- repositories[i].owner.html_url %>'>: Url</a> 
+                </p>
+                <p>
+                    <strong> Owner repositorium Url: </strong> 
+                    <a href='<%- repositories[i].owner.repos_url %>'>: Url</a> 
+                </p>
+            </li>
+        </ul>
+    <% } %>
+
+	</body>
+</html>
+
+

@@ -1,0 +1,24 @@
+<p><a href="/">Home</a> </p>
+
+<form action="/login-user" method="post">
+    <div>
+        <label>Username:</label>
+        <input type="text" name="username"/>
+    </div>
+    <div>
+        <label>Password:</label>
+        <input type="password" name="password"/>
+    </div>
+    <div>
+        <input type="submit" value="Log In"/>
+    </div>
+</form>
+
+<a href="/auth/github">Or login with GitHub</a>
+
+
+<% if (login_errors.length > 0) { %>
+    <h2>Try to log in again.</h2>
+    <h3> <%- login_errors %></h3>
+<% } %>
+

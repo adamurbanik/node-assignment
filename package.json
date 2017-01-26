@@ -1,0 +1,40 @@
+{
+  "name": "node-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaalinoe/node-me.git"
+  },
+  "author": "Adam Urbanik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaalinoe/node-me/issues"
+  },
+  "homepage": "https://github.com/jaalinoe/node-me#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "co": "^4.6.0",
+    "co-foreach": "^1.1.1",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-partials": "^0.3.0",
+    "express-session": "^1.14.1",
+    "install": "^0.8.2",
+    "method-override": "^2.3.6",
+    "npm": "^3.10.9",
+    "passport": "^0.3.2",
+    "passport-github2": "^0.1.10",
+    "passport-local": "^1.0.0",
+    "pg": "^6.1.0",
+    "pg-promise": "^5.3.5",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

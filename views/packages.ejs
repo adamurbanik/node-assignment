@@ -1,0 +1,27 @@
+<p>
+    <a href="/">Home</a> | <a href="/logout">Log Out</a>
+</p>
+<form action="/create-package" method="post">
+    <div>
+        <label>Package name:</label>
+        <input type="text" name="name"/>
+    </div>
+    <div>
+        <label>Price:</label>
+        <input type="number" name="price"/>
+    </div>
+    <div>
+        <input type="submit" value="Create new package"/>
+    </div>
+</form>
+
+
+<p>Lista pakietow</p>
+<% for(var i=0; i<packages.length; i++) { %>
+    <ul>
+        <li>
+            <p><strong> Package Name: </strong> <%= packages[i].name %> </p>
+            <p><strong> Package Price: </strong> <%= packages[i].price %> </p>
+        </li>
+    </ul>
+<% } %>

@@ -1,0 +1,19 @@
+<p> There are my issues </p>
+
+<% for(var i=0; i<issues.length; i++) { %>
+    <ul>
+        <li>
+            <p><strong> Issue title: </strong> <%- issues[i].title %> </p>
+            <p><strong> Issue body: </strong> <%- issues[i].body %> </p>
+            <p>
+                <strong> Issue url: </strong> <a href='<%- issues[i].url %>'>  Url:  </a> 
+            </p>
+            <p>
+                <strong> Repository url: </strong> <a href='<%- issues[i].repository_url %>'> Url </a>
+            </p>
+        </li>
+    </ul>
+<% } %>
+
+
+

@@ -1,0 +1,55 @@
+<a href="/">Home</a> | <a href="/logout">Log Out</a>
+
+
+<% if (roleName == 'basic') { %>
+    <h1><%- title %></h1>
+    <p> Hello <%- user.login %></p>
+
+    <p>
+        <a href='<%- user.html_url %>'> html_url </a>
+    </p>
+    <p>
+        <a href='<%- user.repos_url %>'> repos_url </a>
+    </p>
+    <p> Wszystkie dane usera <%- JSON.stringify(user) %></p>
+
+    <p><a href="/repositories">List my repositories</a></p>
+    <br/>
+
+    <p>Acquired package: 
+        <% for(var i=0; i<userPackages.length; i++) { %>
+            <%= userPackages[i].name, userPackages[i].id %>
+        <% } %>
+    </p>
+    <h3>Interested to buy a new package?</h3>    
+    <p>Please Select a package in the list below</p>
+    <form action="/account/acquire-package" method="post">
+        <select name="package_id">
+            <% for(var i=0; i<packages.length; i++) { %>
+                <option value="<%- packages[i].id %>"> <%- packages[i].name %> </option>
+            <% } %>
+        </select>
+        <input type="submit" value="Acquire">
+    </form>
+
+<% } %>
+
+<% if (roleName == 'supporter') { %>
+    <p>
+        <a href="/packages">Go to packages</a></p>
+    </p
+<% } %>
+
+<% if (roleName != 'supporter' && roleName != 'basic') { %>
+    <h2>Unfortunately you dont have permissions to look at the account</h2>
+    <p>
+        <a href="/login">Please log in </a>
+    </p>
+<% } %>
+
+<h3> Role type: <%- roleName %> </h3>
+
+
+
+
+
